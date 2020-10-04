@@ -74,7 +74,7 @@ else:
     Y = '\033[93m'  # yellow
     B = '\033[94m'  # blue
     R = '\033[91m'  # red
-    W = '\033[0m'  # white
+    W = '\033[0m'   # white
 
 
 def no_color():
