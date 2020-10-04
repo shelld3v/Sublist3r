@@ -846,7 +846,7 @@ class DNSdumpster(enumratorBaseThreaded):
 
     def check_host(self, host):
         is_valid = False
-        Resolver = dns.resolver.Resolver.resolve()
+        Resolver = dns.resolver.Resolver()
         Resolver.nameservers = ['8.8.8.8', '8.8.4.4']
         self.lock.acquire()
         try:
