@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Sublist3r v1.0
-# By Ahmed Aboul-Ela - twitter.com/aboul3la
+# By @shelld3v
 #
 # modules in standard library
 
@@ -747,7 +747,7 @@ class NetcraftEnum(enumratorBaseThreaded):
             resp = self.session.get(url, headers=self.headers,
                                     timeout=self.timeout,
                                     cookies=cookies)
-        except Exception, e:
+        except Exception as e:
             self.print_(e)
             resp = None
         return resp
@@ -879,7 +879,7 @@ class DNSdumpster(enumratorBaseThreaded):
             else:
                 resp = self.session.post(url, data=params,
                         headers=headers, timeout=self.timeout)
-        except Exception, e:
+        except Exception as e:
             self.print_(e)
             resp = None
         return self.get_response(resp)
@@ -961,7 +961,7 @@ class Virustotal(enumratorBaseThreaded):
         try:
             resp = self.session.get(url, headers=self.headers,
                                     timeout=self.timeout)
-        except Exception, e:
+        except Exception as e:
             self.print_(e)
             resp = None
 
@@ -1060,7 +1060,7 @@ class ThreatCrowd(enumratorBaseThreaded):
                         self.print_('%s%s: %s%s' % (R,
                                     self.engine_name, W, subdomain))
                     self.subdomains.append(subdomain.strip())
-        except Exception, e:
+        except Exception as e:
             pass
 
 
@@ -1132,7 +1132,7 @@ class CrtSearch(enumratorBaseThreaded):
                             self.print_('%s%s: %s%s' % (R,
                                     self.engine_name, W, subdomain))
                         self.subdomains.append(subdomain.strip())
-        except Exception, e:
+        except Exception as e:
             print(e)
             pass
 
@@ -1168,7 +1168,7 @@ class PassiveDNS(enumratorBaseThreaded):
         try:
             resp = self.session.get(url, headers=self.headers,
                                     timeout=self.timeout)
-        except Exception, e:
+        except Exception as e:
             resp = None
 
         return self.get_response(resp)
@@ -1192,7 +1192,7 @@ class PassiveDNS(enumratorBaseThreaded):
                         self.print_('%s%s: %s%s' % (R,
                                     self.engine_name, W, subdomain))
                     self.subdomains.append(subdomain.strip())
-        except Exception, e:
+        except Exception as e:
             pass
 
 
